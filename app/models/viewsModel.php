@@ -18,5 +18,6 @@ class viewsModel
         } else {
             $contenido = "404";
         }
+        return $contenido;
     }
 }
