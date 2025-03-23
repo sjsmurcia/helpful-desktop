@@ -18,9 +18,13 @@ if (isset($_GET['views'])) {
 </head>
 
 <body>
-  
 
-    <?php require_once "app/views/inc/script.php"; ?>
+
+    <?php
+
+    use app\controllers\viewsController;
+
+    require_once "app/views/inc/script.php"; ?>
 </body>
 
 </html>
