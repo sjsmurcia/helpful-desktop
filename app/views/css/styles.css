@@ -3,9 +3,3 @@
     padding:0;
     box-sizing: border-box;
 }
-.floating-alert {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1050; /* Para que esté por encima de otros elementos */
-  }
