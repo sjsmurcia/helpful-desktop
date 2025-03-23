@@ -5,3 +5,4 @@
 <link rel="stylesheet" href="<?php echo APP_URL; ?>app/views/css/styles.css">
 
 <script src="<?php echo APP_URL;?>app/views/js/bootstrap.min.js"></script>
+<script src="<?php echo APP_URL;?>app/views/js/main.js"></script>
