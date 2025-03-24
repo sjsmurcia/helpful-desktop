@@ -6,7 +6,7 @@
   <div class="sidebar-search">
     <input type="text" placeholder="Search instances">
   </div>
-  <ul class="sidebar-nav">
+  <ul class="asidebar-nv">
     <li class="sidebar-nav-item">
       <a href="#" class="sidebar-nav-link">
         <i class="bi bi-lightning-fill"></i> Weekly top promoted

@@ -5,19 +5,3 @@
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$font-family: 'Arial', sans-serif;
-$font-size: 16px;
-
-// Ejemplo de reset básico
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: $font-family;
-    font-size: $font-size;
-    color: #333;
-  }
