@@ -1,18 +1,17 @@
 <?php
 
-namespace app\controllers;
+	namespace app\controllers;
+	use app\models\viewsModel;
 
-use app\models\viewsModel;
+	class viewsController extends viewsModel{
 
-class viewsController extends viewsModel
-{
-    public function getviewController($view)
-    {
-        if ($view != "") {
-            $respuesta = $this->getViewsModels($view);
-        } else {
-            $respuesta = "login";
-        }
-        return $respuesta;
-    }
-}
+		/*---------- Controlador obtener vistas ----------*/
+		public function obtenerVistasControlador($vista){
+			if($vista!=""){
+				$respuesta=$this->obtenerVistasModelo($vista);
+			}else{
+				$respuesta="login";
+			}
+			return $respuesta;
+		}
+	}

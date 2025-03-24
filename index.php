@@ -1,6 +1,7 @@
 <?php
 require_once "./config/app.php";
 require_once "./autoload.php";
+
 require_once "./app/views/inc/session_start.php";
 
 if (isset($_GET['views'])) {
@@ -14,7 +15,7 @@ if (isset($_GET['views'])) {
 <html lang="es">
 
 <head>
-    <?php require_once "app/views/inc/head.php"; ?>
+    <?php require_once "./app/views/inc/head.php"; ?>
 </head>
 
 <body>
@@ -24,7 +25,16 @@ if (isset($_GET['views'])) {
 
     use app\controllers\viewsController;
 
-    require_once "app/views/inc/script.php"; ?>
+    $viewsController = new viewsController();
+    $vista = $viewsController->obtenerVistasControlador($url[0]);
+    if ($vista == "login" || $vista == "404") {
+        $require_once = "./app/views/content/" . $vista . "-view.php";
+    } else {
+        require_once "./app/views/inc/navbar.php";
+        require_once $vista;
+    }
+
+    require_once "./app/views/inc/script.php"; ?>
 </body>
 
 </html>

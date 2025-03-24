@@ -1,14 +1,3 @@
 RewriteEngine On
 Options All -Indexes
 RewriteRule ^([a-zA-Z0-9/ñÑ-]+)$ index.php?views=$1
-<IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
-</IfModule>
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^https://(www\.)?tuweb.com/ [NC]
-RewriteRule \.(jpg|jpeg|png|gif)$ - [F]
-<Files .htaccess>
-Order allow,deny
-Deny from all
-</Files>
-

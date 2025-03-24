@@ -1,23 +1,26 @@
 <?php
+	
+	namespace app\models;
 
-namespace app\models;
+	class viewsModel{
 
-class viewsModel
-{
-    protected function getViewsModels($view)
-    {
-        $listaBlanca = ["dashboard"];
-        if (in_array($view, $listaBlanca)) {
-            if (is_file("./app/views/content/" . $view . "-view.php")) {
-                $contenido = "./app/views/content/" . $view . "-view.php";
-            } else {
-                $contenido = "404";
-            }
-        } elseif ($view == "login" || $view == "index") {
-            $contenido = "login";
-        } else {
-            $contenido = "404";
-        }
-        return $contenido;
-    }
-}
+		/*---------- Modelo obtener vista ----------*/
+		protected function obtenerVistasModelo($vista){
+
+			$listaBlanca=["dashboard","userNew","userList","userUpdate","userSearch","userPhoto","logOut"];
+
+			if(in_array($vista, $listaBlanca)){
+				if(is_file("./app/views/content/".$vista."-view.php")){
+					$contenido="./app/views/content/".$vista."-view.php";
+				}else{
+					$contenido="404";
+				}
+			}elseif($vista=="login" || $vista=="index"){
+				$contenido="login";
+			}else{
+				$contenido="404";
+			}
+			return $contenido;
+		}
+
+	}
