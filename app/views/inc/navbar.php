@@ -1,3 +1,5 @@
+
+
 <div class="sidebar">
   <div class="sidebar-header">
     <img src="logo.png" alt="Logo" class="sidebar-logo">
@@ -6,7 +8,7 @@
   <div class="sidebar-search">
     <input type="text" placeholder="Search instances">
   </div>
-  <ul class="asidebar-nv">
+  <ul class="sidebar-nav">
     <li class="sidebar-nav-item">
       <a href="#" class="sidebar-nav-link">
         <i class="bi bi-lightning-fill"></i> Weekly top promoted
@@ -61,3 +63,20 @@
     <a href="#" class="sidebar-user-logout">←</a>
   </div>
 </div>
+
+
+
+
+<!-- <button type="button" class="btn btn-primary" id="toast-button">Open Toast</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast text-bg-primary border-0 align-items-center">
+        <div class="d-flex">
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+
+    </div>
+</div> -->

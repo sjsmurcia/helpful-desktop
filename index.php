@@ -20,7 +20,6 @@ if (isset($_GET['views'])) {
 
 <body>
 
-
     <?php
 
     use app\controllers\viewsController;
@@ -35,6 +34,17 @@ if (isset($_GET['views'])) {
     }
 
     require_once "./app/views/inc/script.php"; ?>
+
+<script>
+        const toastButton = document.querySelector('#toast-button');
+        const toastContent = document.querySelector('.toast');
+        if (toastButton) {
+            toastButton.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastContent);
+                toast.show();
+            });
+        }
+</script>
 </body>
 
 </html>
