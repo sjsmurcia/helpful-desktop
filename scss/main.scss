@@ -1,85 +1,79 @@
-$sidebar-bg-color: #343a40;
-$sidebar-text-color: #fff;
-$sidebar-link-color: #adb5bd;
-$sidebar-link-hover-color: #fff;
-$sidebar-pro-bg-color: #28a745;
-$sidebar-pro-text-color: #fff;
 
-.sidebar {
-  background-color: $sidebar-bg-color;
-  color: $sidebar-text-color;
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+          // Custom.scss
+          @use 'variables';
+          @use 'sidebar';
+          
+          // Estilos generales
+          body {
+              margin: 0;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          }
+          
+          .d-flex {
+              display: flex;
+          }
+          
+          .main-content {
+              flex-grow: 1;
+              padding: 20px;
+              transition: margin-left variables.$transition-time;
+          }
+          
+          // Media queries para responsividad
+          @media (max-width: 992px) {
+              .sidebar {
+                  position: fixed;
+                  z-index: 1000;
+                  height: 100vh;
+                  transform: translateX(-100%);
+                  
+                  &.collapsed {
+                      transform: translateX(-100%);
+                  }
+                  
+                  &.mobile-visible {
+                      transform: translateX(0);
+                  }
+              }
+              
+              .main-content {
+                  margin-left: 0 !important;
+              }
+              
+              .mobile-menu-btn {
+                  display: block !important;
+                  position: fixed;
+                  left: 10px;
+                  top: 10px;
+                  z-index: 900;
+              }
+          }
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
 
-  .sidebar-header {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-  }
-  .sidebar-logo {
-    width: 40px;
-    margin-right: 1rem;
-  }
-  .sidebar-back {
-    color: $sidebar-text-color;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-}
-.sidebar-search {
-  padding: 1rem;
-  input {
-    width: 100%;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 4px;
-    background-color: darken($sidebar-bg-color, 10%);
-  }
-}
-.sidebar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  .sidebar-nav-item {
-    .sidebar-nav-link {
-      display: flex;
-      align-items: center;
-      padding: 0.75rem 1rem;
-      color: $sidebar-link-color;
-      text-decoration: none;
-      i {
-        margin-right: 0.5rem;
-      }
-      &:hover {
-        color: $sidebar-link-hover-color;
-        background-color: darken($sidebar-bg-color, 5%);
-      }
-    }
-  }
-}
-.sidebar-pro {
-  background-color: $sidebar-pro-bg-color;
-  color: $sidebar-pro-text-color;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 4px;
-  .sidebar-pro-link {
-    color: $sidebar-pro-text-color;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  p {
-    margin-bottom: 0.5rem;
-  }
-  .sidebar-pro-button{
-    background-color:darken ($sidebar-pro-bg-color,10%);
-    color:$sidebar-pro-text-color;
-    padding:0.5rem 1rem;
-    border:none;
-    border-radius:4px;
-    text-decoration:none;
-  }
-}
-@import "../node_modules/bootstrap/scss/bootstrap";
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here

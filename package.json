@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3"
+  },
+  "scripts": {
+    "scss": "sass ./scss/main.scss ./app/views/css/styles.css --watch --style compressed"
   }
 }

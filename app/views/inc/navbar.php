@@ -1,82 +1,86 @@
+<button class="btn btn-primary mobile-menu-btn d-none" id="mobileMenuBtn">
+  <i class="bi bi-list"></i>
+</button>
 
-
-<div class="sidebar">
-  <div class="sidebar-header">
-    <img src="logo.png" alt="Logo" class="sidebar-logo">
-    <a href="#" class="sidebar-back">←</a>
-  </div>
-  <div class="sidebar-search">
-    <input type="text" placeholder="Search instances">
-  </div>
-  <ul class="sidebar-nav">
-    <li class="sidebar-nav-item">
-      <a href="#" class="sidebar-nav-link">
-        <i class="bi bi-lightning-fill"></i> Weekly top promoted
-      </a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a href="#" class="sidebar-nav-link">
-        <i class="bi bi-cube"></i> Single objects
-      </a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a href="#" class="sidebar-nav-link">
-        <i class="bi bi-layers"></i> Objects sets
-      </a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a href="#" class="sidebar-nav-link">
-        <i class="bi bi-images"></i> My gallery
-      </a>
-    </li>
-    <li class="sidebar-nav-item">
-      <a href="#" class="sidebar-nav-link">
-        <i class="bi bi-heart"></i> Favourites
-      </a>
-    </li>
-  </ul>
-  <div class="sidebar-pro">
-    <a href="#" class="sidebar-pro-link">
-      <i class="bi bi-lightning-fill"></i> Switch account to Pro
-    </a>
-    <p>Unlimited access to biggest 3d models service with highest quality</p>
-    <a href="#" class="sidebar-pro-button">Get your Pro →</a>
-  </div>
-  <ul class="sidebar-footer">
-    <li class="sidebar-footer-item">
-      <a href="#" class="sidebar-footer-link">
-        <i class="bi bi-gear"></i> Settings
-      </a>
-    </li>
-    <li class="sidebar-footer-item">
-      <a href="#" class="sidebar-footer-link">
-        <i class="bi bi-question-circle"></i> FAQ
-      </a>
-    </li>
-  </ul>
-  <div class="sidebar-user">
-    <img src="user.jpg" alt="User" class="sidebar-user-avatar">
-    <div class="sidebar-user-info">
-      <p class="sidebar-user-name">John Doe</p>
-      <p class="sidebar-user-type">ModGallery Basic</p>
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar position-relative" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+      <i class="fa-solid fa-circle-chevron-left" id="toggle-icon"></i>
     </div>
-    <a href="#" class="sidebar-user-logout">←</a>
+
+    <div class="logo">
+      <i class="fa-brands fa-rebel logo-icon"></i>
+      <span class="logo-text">sjsmurcia</span>
+    </div>
+
+    <div class="d-flex flex-column h-100">
+      <ul class="nav flex-column mt-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-search"></i>
+            <span class="sidebar-text">Search instances</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-megaphone"></i>
+            <span class="sidebar-text">Weekly pop promotional</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-box"></i>
+            <span class="sidebar-text">Single objects</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-boxes"></i>
+            <span class="sidebar-text">Objects sets</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-images"></i>
+            <span class="sidebar-text">My gallery</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-star"></i>
+            <span class="sidebar-text">Favourites</span>
+          </a>
+        </li>
+      </ul>
+
+
+
+      <ul class="nav flex-column mb-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-gear"></i>
+            <span class="sidebar-text">Settings</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-question-circle"></i>
+            <span class="sidebar-text">FAQ</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="user-info sidebar-text">
+        <p class="mb-1">John Doe</p>
+        <p class="small text-muted">ModGallery Bank</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content" id="mainContent">
+    <h1>Contenido Principal</h1>
+    <p>Aquí va el contenido principal de tu aplicación.</p>
   </div>
 </div>
-
-
-
-
-<!-- <button type="button" class="btn btn-primary" id="toast-button">Open Toast</button>
-
-<div class="toast-container position-fixed bottom-0 end-0 p-3" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast text-bg-primary border-0 align-items-center">
-        <div class="d-flex">
-            <div class="toast-body">
-                Hello, world! This is a toast message.
-            </div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-
-    </div>
-</div> -->

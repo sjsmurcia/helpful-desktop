@@ -7,3 +7,5 @@
 <link rel="styleshhet" href="<?php echo APP_URL; ?>app/views/css/botstrap-icons.min.css">
 
 <script src="<?php echo APP_URL; ?>app/views/js/bootstrap.min.js" ></script>
+<script src="<?php echo APP_URL; ?>app/views/js/bootstrap.bundle.min.js" ></script>
+<script src="https://kit.fontawesome.com/54aee58547.js" crossorigin="anonymous"></script>
