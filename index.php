@@ -46,48 +46,44 @@ if (isset($_GET['views'])) {
         }
 </script>
 <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const toggleIcon = document.getElementById('toggle-icon');
-            const mainContent = document.getElementById('mainContent');
-            
-            sidebar.classList.toggle('collapsed');
-            
-            if (sidebar.classList.contains('collapsed')) {
-                toggleIcon.classList.remove('bi-chevron-left');
-                toggleIcon.classList.add('bi-chevron-right');
-                mainContent.style.marginLeft = '70px';
-            } else {
-                toggleIcon.classList.remove('bi-chevron-right');
-                toggleIcon.classList.add('bi-chevron-left');
-                mainContent.style.marginLeft = '280px';
-            }
-        }
-        
-        // Responsividad para móviles
-        function handleMobileView() {
-            const sidebar = document.getElementById('sidebar');
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            
-            if (window.innerWidth <= 992) {
-                sidebar.classList.remove('collapsed');
-                mobileMenuBtn.addEventListener('click', () => {
-                    sidebar.classList.toggle('mobile-visible');
-                });
-            } else {
-                sidebar.classList.remove('mobile-visible');
-            }
-        }
-        
-        // Inicialización y eventos
-        document.addEventListener('DOMContentLoaded', () => {
-            handleMobileView();
-            // Asegurarse de que el contenido principal no quede detrás del sidebar
-            document.getElementById('mainContent').style.marginLeft = '280px';
-        });
-        
-        window.addEventListener('resize', handleMobileView);
-    </script>
+      // Toggle sidebar
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('collapsed');
+    
+    const icon = document.getElementById('toggle-icon');
+    if (sidebar.classList.contains('collapsed')) {
+      icon.classList.remove('fa-chevron-left');
+      icon.classList.add('fa-chevron-right');
+    } else {
+      icon.classList.remove('fa-chevron-right');
+      icon.classList.add('fa-chevron-left');
+    }
+  }
+  
+  // Mobile menu toggle
+  document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('mobile-visible');
+  });
+  
+  // Initialize tooltips
+  document.addEventListener('DOMContentLoaded', function() {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Set active nav item
+    const navItems = document.querySelectorAll('.nav-link');
+    navItems.forEach(item => {
+      item.addEventListener('click', function() {
+        navItems.forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  });
+</script>
 </body>
 
 </html>

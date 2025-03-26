@@ -1,14 +1,42 @@
-//colores
-$sidebar-bg: #f8f9fa;
-$sidebar-border: #dee2e6;
-$primary-color: #6c757d;
-$hover-bg: #e9ecef;
+// Colores
+$sidebar-bg: #72baa9;
+$sidebar-border: #d5e7b5;
+$primary-color: #7e5cad;
+$hover-bg: #474e93;
 $pro-section-bg: #e9ecef;
-
+//fonts
+$fonts-family: "Liter", sans-serif;
 // Dimensiones
-$sidebar-width: 280px;
-$sidebar-collapsed-width: 70px;
-$logo-height: 60px;
+$sidebar-width: 10rem;
+$sidebar-collapsed-width: 65px;
+$logo-height: 4.5rem ;
 
 // Transiciones
-$transition-time: 0.3s;
+$transition-time: 0.5s;
+// Variables de color basadas en la paleta proporcionada
+$primary: #2e86de;
+$primary-light: #54a0ff;
+$secondary: #10ac84;
+$secondary-light: #1dd1a1;
+$accent: #f368e0;
+$accent-light: #ff9ff3;
+$warning: #ff9f43;
+$warning-light: #feca57;
+$danger: #ee5253;
+$danger-light: #ff6b6b;
+$info: #0abde3;
+$info-light: #48dbfb;
+$dark: #222f3e;
+$dark-light: #576574;
+$gray: #8395a7;
+$gray-light: #c8d6e5;
+$purple: #5f27cd;
+$purple-dark: #341f97;
+$teal: #01a3a4;
+$teal-light: #00d2d3;
+
+// Variables del sidebar
+// $sidebar-width: 280px;
+// $sidebar-collapsed-width: 70px;
+// $logo-height: 60px;
+// $transition-time: 0.3s;

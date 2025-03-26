@@ -1,53 +1,9 @@
 
           // Custom.scss
-          @use 'variables';
-          @use 'sidebar';
-          
-          // Estilos generales
-          body {
-              margin: 0;
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-          }
-          
-          .d-flex {
-              display: flex;
-          }
-          
-          .main-content {
-              flex-grow: 1;
-              padding: 20px;
-              transition: margin-left variables.$transition-time;
-          }
-          
-          // Media queries para responsividad
-          @media (max-width: 992px) {
-              .sidebar {
-                  position: fixed;
-                  z-index: 1000;
-                  height: 100vh;
-                  transform: translateX(-100%);
-                  
-                  &.collapsed {
-                      transform: translateX(-100%);
-                  }
-                  
-                  &.mobile-visible {
-                      transform: translateX(0);
-                  }
-              }
-              
-              .main-content {
-                  margin-left: 0 !important;
-              }
-              
-              .mobile-menu-btn {
-                  display: block !important;
-                  position: fixed;
-                  left: 10px;
-                  top: 10px;
-                  z-index: 900;
-              }
-          }
+// Option B: Include parts of Bootstrap
+@use 'variables';
+@use 'sidebar';
+
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
