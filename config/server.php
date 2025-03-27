@@ -6,3 +6,5 @@ const DB_USER="root";
 const DB_PASS="";
 
 ?>
+
+//fernanda empeza aqui

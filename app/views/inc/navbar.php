@@ -9,13 +9,13 @@
       <div class="toggle-btn" onclick="toggleSidebar()">
         <i class="fas fa-chevron-left" id="toggle-icon"></i>
       </div>
-      
+
       <a href="/" class="d-flex align-items-center mb-2 mb-md-0 me-md-0 text-white text-decoration-none logo">
         <i class="fas fa-cubes me-2 logo-icon"></i>
-        <span class="fs-4 logo-text" >sjsmurcia</span>
+        <span class="fs-4 logo-text">sjsmurcia</span>
       </a>
       <hr>
-      
+
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
           <a href="#" class="nav-link active" aria-current="page">
@@ -54,15 +54,15 @@
           </a>
         </li>
       </ul>
-      
+
       <!-- <div class="pro-section p-3 mb-3 rounded">
         <h6 class="sidebar-text">Switch account to Pro</h6>
         <p class="small sidebar-text">Unlimited access to high-end 3m mobile service with highest quality.</p>
         <button class="btn pro-btn w-100 sidebar-text">Get your Pro</button>
       </div> -->
-      
+
       <hr>
-      
+
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
           <a href="#" class="nav-link text-white">
@@ -77,7 +77,7 @@
           </a>
         </li>
       </ul>
-      
+
       <div class="dropdown border-top border-secondary mt-auto">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle p-3" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
@@ -90,7 +90,9 @@
           <li><a class="dropdown-item" href="#">Cuenta</a></li>
           <li><a class="dropdown-item" href="#">Ajustes</a></li>
           <li><a class="dropdown-item" href="#">Solicitudes</a></li>
-          <li><hr class="dropdown-divider"></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
           <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
         </ul>
       </div>
